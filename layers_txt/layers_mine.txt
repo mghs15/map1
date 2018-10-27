@@ -46,8 +46,8 @@
       },
      {
        "type": "Layer",
-       "id": "english",
-       "title": "English2",
+       "id": "english2",
+       "title": "English",
        "url": "https://maps.gsi.go.jp/xyz/english/{z}/{x}/{y}.png",
        "cocotile": true,
        "maxNativeZoom": 11,
