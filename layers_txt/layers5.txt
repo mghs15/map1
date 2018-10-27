@@ -902,7 +902,7 @@
           "minZoom": 8,
           "maxZoom": 17,
           "maxNativeZoom": 18,
-          "html": "重ねるハザードマップのうち、洪水危険地域を載せています。<br><img src="https://disaportal.gsi.go.jp/hazardmap/copyright/img/shinsui_legend2-1.png" alt="凡例" width=100><br><a target='_blank' href='https://disaportal.gsi.go.jp/hazardmap/copyright/opendata.html'>「重ねるハザードマップ」のデータ配信について</a>"
+          "html": "重ねるハザードマップのうち、洪水危険地域を載せています。<br><img src="https://disaportal.gsi.go.jp/hazardmap/copyright/img/shinsui_legend2-1.png" alt='凡例' width=100><br><a target='_blank' href='https://disaportal.gsi.go.jp/hazardmap/copyright/opendata.html'>「重ねるハザードマップ」のデータ配信について</a>"
         },
         {
           "type": "Layer",
