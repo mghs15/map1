@@ -1,0 +1,11 @@
+﻿{
+  "layers": [
+    {
+     "type": "LayerGroup",
+     "title": "オリジナル重ね合わせ情報",
+     "iconUrl": "./image/system/folder_new.png",
+     "toggleall": false,
+     "src": "./layers_mine.txt"
+     }
+            ]
+}
