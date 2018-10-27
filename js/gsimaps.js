@@ -61,7 +61,7 @@ CONFIG.layersTab = null;
 CONFIG.layersTabUrl = "./layers_txt/tab.txt";
 
 CONFIG.layerBase          = ['./layers_txt/layers0.txt'];
-CONFIG.layerBaseDefaultID = "std";
+CONFIG.layerBaseDefaultID = "pale";
 CONFIG.layerBaseFolder    = "ベースマップ";
 CONFIG.layerBaseFolderSYS = "GSI.MAP.BASE";
 CONFIG.layers = [
