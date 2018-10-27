@@ -895,8 +895,8 @@
         },
         {
           "type": "Layer",
-          "id": "geology",
-          "title": "*重ねるハザードマップ",
+          "id": "01_flood_l2_shinsuishin_kuni_data",
+          "title": "*重ねるハザードマップ（洪水）",
           "url": "https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_kuni_data/{z}/{x}/{y}.png",
           "cocotile": false,
           "minZoom": 8,
