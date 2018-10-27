@@ -454,6 +454,7 @@ CONFIG.MAPMENU = {
  ************************************************************************/
 CONFIG.FUNCMENU = {
 	title : '機能',
+	childrenWidth:100,
 	children : [
 		{
 			title : '設定',
@@ -558,6 +559,13 @@ CONFIG.FUNCMENU = {
 					arrow : true
 				},
 				{
+				title : '断面図',
+				arrow : true,
+				id : 'danmen',
+				arrow : true,
+				childrenWidth:210,
+				},
+				{
 					id : 'ucode',
 					title : '場所情報コード',
 					arrow : true,
@@ -642,13 +650,6 @@ CONFIG.FUNCMENU = {
 			arrow : true,
 			id : 'gps',
 			checkCondition : function() { return GSI.GeoLocation.can; }
-		},
-		{
-			title : '断面図',
-			arrow : true,
-			id : 'danmen',
-			arrow : true,
-			childrenWidth:210,
 		}/*,
 		{
 			
