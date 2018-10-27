@@ -5509,7 +5509,7 @@ layertreedialog_search_taglist *
 
 #title_twitter {
 	top:5px;
-	right:96px; //96px
+	right:40px; 
 	position:absolute;
 	display:block;
 	font-weight: bold;
