@@ -10,6 +10,5 @@
       "maxZoom": 18,
       "maxNativeZoom": 2
     }
-   }
   ]
 }
