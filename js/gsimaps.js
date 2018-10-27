@@ -649,7 +649,7 @@ CONFIG.FUNCMENU = {
 			id : 'danmen',
 			arrow : true,
 			childrenWidth:210,
-		},
+		}/*,
 		{
 			
 			title : '3D',
@@ -673,20 +673,20 @@ CONFIG.FUNCMENU = {
 				{
 					id : 'gsi3d_custom',
 					title : 'カスタム'
-				}/*,
+				},
 				{
 					id : 'gsi3d_view',
 					title : '表示領域(最大2048×2048)',
 					//arrow : true,
 					href : 'gsi3d_view'//'https://cyberjapandata.gsi.go.jp/3d/site/index.html?z={z}&lat={y}&lon={x}'
-				}*/
+				}
 			]
-		},
+		}
 		{
 			title : 'Globe',
 			arrow : true,
 			href : 'gsiglobe'//'https://maps.gsi.go.jp/globe/index_globe.html'
-		}
+		}*/
 	]
 };
 
