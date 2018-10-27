@@ -4,7 +4,7 @@
       "type": "Layer",
       "id": "kitetsu_haisen",
       "title": "紀州鉄道廃線部分",
-      "url": "https://maps.gsi.go.jp/xyz/std/{z}/{x}/{y}.geojson",
+      "url": "../xyz/std/{z}/{x}/{y}.geojson",
       "cocotile": false,
       "minZoom": 2,
       "maxZoom": 18,
