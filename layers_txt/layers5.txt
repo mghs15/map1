@@ -895,9 +895,9 @@
         }
         {
           "type": "Layer",
-          "id": "kokuarea",
+          "id": "geology",
           "title": "*地質図",
-          "url": "https://maps.gsi.go.jp/xyz/kokuarea/{z}/{x}/{y}.geojson",
+          "url": "https://gbank.gsj.jp/seamless/tilemap/detailed/g/{z}/{y}/{x}.png",
           "cocotile": false,
           "minZoom": 8,
           "maxZoom": 18,
