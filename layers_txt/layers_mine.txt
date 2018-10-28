@@ -4,7 +4,7 @@
       "type": "Layer",
       "id": "hamanaka",
       "title": "浜中町営軌道",
-      "url": "./xyz/はまなか/{z}/{x}/{y}.geojson",
+      "url": "./xyz/hamanaka/{z}/{x}/{y}.geojson",
       "cocotile": false,
       "minZoom": 2,
       "maxZoom": 18,
