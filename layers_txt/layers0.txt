@@ -3,7 +3,7 @@
     {
       "type": "Layer",
       "id": "std",
-      "title": "標準地図",
+      "title": "標準地図（国土地理院）",
       "url": "https://maps.gsi.go.jp/xyz/std/{z}/{x}/{y}.png",
       "cocotile": true,
       "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#std",
@@ -12,7 +12,7 @@
     {
       "type": "Layer",
       "id": "pale",
-      "title": "淡色地図",
+      "title": "淡色地図（国土地理院）",
       "url": "https://maps.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png",
       "cocotile": true,
       "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#pale",
@@ -21,7 +21,7 @@
     {
       "type": "Layer",
       "id": "blank",
-      "title": "白地図",
+      "title": "白地図（国土地理院）",
       "url": "https://maps.gsi.go.jp/xyz/blank/{z}/{x}/{y}.png",
       "cocotile": true,
       "maxNativeZoom": 14,
@@ -31,7 +31,7 @@
     {
       "type": "Layer",
       "id": "english",
-      "title": "English",
+      "title": "English（国土地理院）",
       "url": "https://maps.gsi.go.jp/xyz/english/{z}/{x}/{y}.png",
       "cocotile": true,
       "maxNativeZoom": 11,
@@ -41,7 +41,7 @@
     {
       "type": "Layer",
       "id": "ort",
-      "title": "写真",
+      "title": "写真（国土地理院）",
       "url": "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
       "cocotile": true,
       "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#seamlessphoto",
