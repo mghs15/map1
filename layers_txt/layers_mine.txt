@@ -8,7 +8,19 @@
       "cocotile": false,
       "minZoom": 2,
       "maxZoom": 18,
-      "maxNativeZoom": 2
+      "maxNativeZoom": 2,
+      "html": "桑園駅から分岐し、北大に暖房用石炭を運び入れていた引き込み線です。。"
+      },
+      {
+      "type": "Layer",
+      "id": "jobu",
+      "title": "上武鉄道配線跡",
+      "url": "./xyz/jobu/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "上武鉄道（旧日本ニッケル線）の廃線跡です。"
       },
       {
       "type": "Layer",
@@ -29,7 +41,8 @@
       "cocotile": false,
       "minZoom": 2,
       "maxZoom": 18,
-      "maxNativeZoom": 2
+      "maxNativeZoom": 2,
+      "html": "紀州鉄道の廃線跡です。西の路線は、工場への引き込み線です。"
       }
   ]
 }
