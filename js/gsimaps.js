@@ -62,7 +62,7 @@ CONFIG.layersTabUrl = "./layers_txt/tab.txt";
 
 CONFIG.layerBase          = ['./layers_txt/layers0.txt'];
 CONFIG.layerBaseDefaultID = "pale";
-CONFIG.layerBaseFolder    = "ベースマップ（国土地理院）";
+CONFIG.layerBaseFolder    = "ベースマップ";
 CONFIG.layerBaseFolderSYS = "GSI.MAP.BASE";
 CONFIG.layers = [
 	{
@@ -124,7 +124,7 @@ CONFIG.TOPMESSAGE = null;
 };*/
 
 // 初期位置
-CONFIG.DEFAULT = { CENTER : [36.104611, 140.084556],ZOOM : 5};
+CONFIG.DEFAULT = { CENTER : [36.237766, 138.862617],ZOOM : 5};
 
 // レイヤータイプリスト
 CONFIG.LAYERTYPELIST = {
