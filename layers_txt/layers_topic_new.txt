@@ -2,7 +2,7 @@
   "layers": [
     {
       "type": "LayerGroup",
-      "title": "新着・注目",
+      "title": "国土地理院の地図",
       "iconUrl": "./image/system/folder_new.png",
       "toggleall": false,
       "entries": [
@@ -31,6 +31,13 @@
           "legendUrl": "",
           "html": "<div class=\"gsi_layerinfo_title\">自分で作る色別標高図</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
+    {
+     "type": "LayerGroup",
+     "title": "地形・土地・更新情報（地理院）",
+     "iconUrl": "./image/system/folder_new.png",
+     "toggleall": false,
+     "src": "./layers3.txt"
+    }
     {
       "type": "Layer",
       "id": "std2",
