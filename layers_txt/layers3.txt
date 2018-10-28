@@ -2,7 +2,7 @@
   "layers": [
     {
       "type": "LayerGroup",
-      "title": "基準点・測地観測",
+      "title": "基準点・測地観測（国土地理院）",
       "toggleall": false,
       "entries": [
         {
