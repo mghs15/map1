@@ -9,7 +9,7 @@
       "minZoom": 2,
       "maxZoom": 18,
       "maxNativeZoom": 2,
-      "html": "茶内駅に接続していた浜中町営軌道です。"
+      "html": "茶内駅に接続していた浜中町営軌道です。<a href='http://tsushima-keibendo.a.la9.jp/hamanaka/hamanaka.html'>こちら</a>のページを参考にしました。"
       },
       {
       "type": "Layer",
