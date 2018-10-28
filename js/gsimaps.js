@@ -74,11 +74,11 @@ CONFIG.layers = [
 	},
 	{
 		"url":'./layers_txt/layers1.txt'
-	},
+	},/*
 	{
 		"url":'./layers_txt/layers2.txt'
 	},
-/*	{
+	{
 		"url":'./layers_txt/layers3.txt'
 	},
 	{
