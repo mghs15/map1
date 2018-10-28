@@ -37,7 +37,7 @@
      "iconUrl": "./image/system/folder_new.png",
      "toggleall": false,
      "src": "./layers3.txt"
-    }
+    },
     {
       "type": "Layer",
       "id": "std2",
