@@ -9,7 +9,18 @@
       "minZoom": 2,
       "maxZoom": 18,
       "maxNativeZoom": 2,
-      "html": "桑園駅から分岐し、北大に暖房用石炭を運び入れていた引き込み線です。。"
+      "html": "桑園駅から分岐して、北大に暖房用石炭を運び入れていた引き込み線です。"
+      },
+      {
+      "type": "Layer",
+      "id": "agatsuma",
+      "title": "吾妻線旧線",
+      "url": "./xyz/agatsuma/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "八ッ場ダム建設に伴い、移設された吾妻線旧線部分です。"
       },
       {
       "type": "Layer",
