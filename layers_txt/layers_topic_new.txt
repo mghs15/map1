@@ -53,6 +53,13 @@
      "src": "./layers_experimental.txt"
     },
     {
+     "type": "LayerGroup",
+     "title": "基準点・測地（地理院）",
+     "iconUrl": "./image/system/folder_new.png",
+     "toggleall": false,
+     "src": "./layers3.txt"
+    },
+    {
       "type": "Layer",
       "id": "std2",
       "title": "標準地図（重合せ用）",
