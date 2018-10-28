@@ -36,7 +36,7 @@
      "title": "地形・土地・更新情報（地理院）",
      "iconUrl": "./image/system/folder_new.png",
      "toggleall": false,
-     "src": "./layers3.txt"
+     "src": "./layers2.txt"
     },
     {
       "type": "Layer",
