@@ -2,7 +2,7 @@
   "layers": [
     {
       "type": "LayerGroup",
-      "title": "他機関の情報",
+      "title": "国土地理院以外の機関の情報",
       "open": false,
       "toggleall": false,
       "entries": [
