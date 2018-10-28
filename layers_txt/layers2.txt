@@ -1346,7 +1346,7 @@
     },
     {
       "type": "LayerGroup",
-      "title": "土地の特徴を示した地図",
+      "title": "土地の特徴を示した地図（国土地理院）",
       "toggleall": false,
       "entries": [
         {
@@ -3201,7 +3201,7 @@
     },
     {
       "type": "LayerGroup",
-      "title": "地図の更新情報や提供地域等",
+      "title": "地図の更新情報や提供地域等（国土地理院）",
       "toggleall": false,
       "entries": [
        {
