@@ -62,7 +62,7 @@ CONFIG.layersTabUrl = "./layers_txt/tab.txt";
 
 CONFIG.layerBase          = ['./layers_txt/layers0.txt'];
 CONFIG.layerBaseDefaultID = "pale";
-CONFIG.layerBaseFolder    = "ベースマップ";
+CONFIG.layerBaseFolder    = "ベースマップ（国土地理院）";
 CONFIG.layerBaseFolderSYS = "GSI.MAP.BASE";
 CONFIG.layers = [
 	{
@@ -78,7 +78,7 @@ CONFIG.layers = [
 	{
 		"url":'./layers_txt/layers2.txt'
 	},
-	{
+/*	{
 		"url":'./layers_txt/layers3.txt'
 	},
 	{
@@ -89,7 +89,7 @@ CONFIG.layers = [
 	},
 	{
 		"url":'./layers_txt/layers_topic_chirikyoiku.txt'
-	},
+	},*/
 	{
 		"url":'./layers_txt/layers5.txt'
 	},
