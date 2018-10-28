@@ -19,6 +19,17 @@
       "minZoom": 2,
       "maxZoom": 18,
       "maxNativeZoom": 2
+      },
+      {
+      "type": "Layer",
+      "id": "kurekichi",
+      "title": "呉基地引込み線跡",
+      "url": "./xyz/kurekichi/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "呉基地にかつて引かれていた引込み線を再現しました。資料は国土地理院の地理院地図で提供されている単写真（1947年に米軍撮影のもの）です。かなり大雑把に取得しています。また、現在の日新製鉄内（赤いポリゴン内）の取得は諦めました。ご了承ください。"
       }
   ]
 }
