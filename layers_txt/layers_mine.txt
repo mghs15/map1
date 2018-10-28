@@ -54,6 +54,17 @@
       "maxZoom": 18,
       "maxNativeZoom": 2,
       "html": "紀州鉄道の廃線跡です。西の路線は、工場への引き込み線です。"
+      },
+      {
+      "type": "Layer",
+      "id": "saga",
+      "title": "佐賀線",
+      "url": "./xyz/saga/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "佐賀線の廃線跡です。地平時代の佐賀駅、味の素の専用線と思われる路線も取得しています。"
       }
   ]
 }
