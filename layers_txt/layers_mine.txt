@@ -9,6 +9,16 @@
       "minZoom": 2,
       "maxZoom": 18,
       "maxNativeZoom": 2
+      },
+      {
+      "type": "Layer",
+      "id": "hokudai",
+      "title": "北海道大学引込み線跡",
+      "url": "./xyz/hokudai/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2
       }
   ]
 }
