@@ -2,6 +2,17 @@
   "layers": [
       {
       "type": "Layer",
+      "id": "hamanaka",
+      "title": "浜中町営軌道",
+      "url": "./xyz/はまなか/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "茶内駅に接続していた浜中町営軌道です。"
+      },
+      {
+      "type": "Layer",
       "id": "hokudai",
       "title": "北海道大学引込み線跡",
       "url": "./xyz/hokudai/{z}/{x}/{y}.geojson",
