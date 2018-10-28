@@ -2,16 +2,6 @@
   "layers": [
       {
       "type": "Layer",
-      "id": "kitetsu_haisen",
-      "title": "紀州鉄道廃線部分",
-      "url": "./xyz/kitetsu_haisen/{z}/{x}/{y}.geojson",
-      "cocotile": false,
-      "minZoom": 2,
-      "maxZoom": 18,
-      "maxNativeZoom": 2
-      },
-      {
-      "type": "Layer",
       "id": "hokudai",
       "title": "北海道大学引込み線跡",
       "url": "./xyz/hokudai/{z}/{x}/{y}.geojson",
@@ -30,6 +20,16 @@
       "maxZoom": 18,
       "maxNativeZoom": 2,
       "html": "呉基地にかつて引かれていた引込み線を再現しました。資料は国土地理院の地理院地図で提供されている単写真（1947年に米軍撮影のもの）です。かなり大雑把に取得しています。また、現在の日新製鉄内（赤いポリゴン内）の取得は諦めました。ご了承ください。"
+      }
+      {
+      "type": "Layer",
+      "id": "kitetsu_haisen",
+      "title": "紀州鉄道廃線部分",
+      "url": "./xyz/kitetsu_haisen/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2
       }
   ]
 }
