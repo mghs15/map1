@@ -36641,13 +36641,13 @@ GSI.ReliefTileLayer._sampleData =
 	gradate : false,
 	useHillshademap : false,
 	colors : [
-		{ h:   0, color: "#2db4b4" },
-		{ h: 100, color: "#71b42d" },
-		{ h: 300, color: "#b4a72d" },
-		{ h:1000, color: "#b4562d" },
-		{ h:2000, color: "#b4491b" },
-		{ h:4000, color: "#b43d09" },
-		{ h:null, color: "#b43d09" }
+		{ h:   0, color: "#0088FF" },
+		{ h: 100, color: "#3391CC" },
+		{ h: 300, color: "#669B99" },
+		{ h:1000, color: "#99A466" },
+		{ h:2000, color: "#CCAE33" },
+		{ h:4000, color: "#FFB700" },
+		{ h:null, color: "#FFB700" }
 	]
 };
 	
@@ -37424,7 +37424,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
 			tr.append( $( "<td>" ).append( this._lowElevationInput ).append("m") );
 			
 			
-			color = "#2db4b4";
+			color = "#0088FF";
 			tr.append( $( "<td>" ).html("の色") );
 			var a = $( "<a>" ).attr({"href":"javascript:void(0);"}).addClass("color");
 			a.css( {
@@ -37472,7 +37472,7 @@ GSI.EditReliefDialog = GSI.Dialog.extend( {
 			tr.append( $( "<td>" ).append( this._hiElevationInput ).append("m") );
 			
 			
-			color = "#b43d09";
+			color = "#FFB700";
 			tr.append( $( "<td>" ).html("の色") );
 			var a = $( "<a>" ).attr({"href":"javascript:void(0);"}).addClass("color");
 			a.css( {
