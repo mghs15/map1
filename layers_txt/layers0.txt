@@ -17,7 +17,8 @@
       "url": "https://maps.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png",
       "cocotile": true,
       "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#pale",
-      "errorTileUrl": "./image/map/no-data-pale.png"
+      "errorTileUrl": "./image/map/no-data-pale.png",
+"html": "<a href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>国土地理院コンテンツ利用規約</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
     },
     {
       "type": "Layer",
@@ -27,7 +28,8 @@
       "cocotile": true,
       "maxNativeZoom": 14,
       "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#blank",
-      "errorTileUrl": "./image/map/no-data-blank.png"
+      "errorTileUrl": "./image/map/no-data-blank.png",
+"html": "<a href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>国土地理院コンテンツ利用規約</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
     },
     {
       "type": "Layer",
@@ -37,7 +39,8 @@
       "cocotile": true,
       "maxNativeZoom": 11,
       "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#english",
-      "errorTileUrl": "./image/map/no-data-english.png"
+      "errorTileUrl": "./image/map/no-data-english.png",
+"html": "<a href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>国土地理院コンテンツ利用規約</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
     },
     {
       "type": "Layer",
@@ -46,7 +49,8 @@
       "url": "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
       "cocotile": true,
       "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#seamlessphoto",
-      "errorTileUrl": "./image/map/no-data-ort.png"
+      "errorTileUrl": "./image/map/no-data-ort.png",
+"html": "<a href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>国土地理院コンテンツ利用規約</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
     },
     {
       "type": "Layer",
@@ -54,7 +58,7 @@
       "title": "OpenStreetMap",
       "url": "https://b.tile.openstreetmap.org/{z}/{x}/{y}.png",
       "cocotile": true,
-      "html": "OpenStreetMap(OSM)は、道路地図などの地理情報データを誰でも利用できるよう、フリーの地理情報データを作成することを目的としたプロジェクトです。<br><a href='https://openstreetmap.jp/'>OpenStreetMap</a>",
+      "html": "OpenStreetMap(OSM)は、道路地図などの地理情報データを誰でも利用できるよう、フリーの地理情報データを作成することを目的としたプロジェクトです。<br><a href='https://openstreetmap.jp/' target="_blank">OpenStreetMap</a>",
       "errorTileUrl": "./image/map/no-data.png"
     }
   ]
