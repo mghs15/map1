@@ -1,5 +1,38 @@
-{
+﻿{
   "layers": [
+      {
+      "type": "Layer",
+      "id": "konpoku",
+      "title": "根北線",
+      "url": "./xyz/konpoku/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "根北線です。未成線部分は途中かなりあやふやです。地理院地図の空中写真を用いてトレースしています。<a href='http://www1.cts.ne.jp/~kimata/shibetsu.htm'>こちら</a>のページを参考にしました。"
+      },
+      {
+      "type": "Layer",
+      "id": "yubari",
+      "title": "根北線",
+      "url": "./xyz/yubari/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "夕張鉄道線です。細かい配線等省略しています。地理院地図の空中写真を用いてトレースしています。<a href='http://www1.cts.ne.jp/~kimata/shibetsu.htm'>こちら</a>のページを参考にしました。"
+      },
+      {
+      "type": "Layer",
+      "id": "ooyubari",
+      "title": "根北線",
+      "url": "./xyz/ooyubari/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "三菱鉱業大夕張線です。細かい配線等省略しています。地理院地図の空中写真を用いてトレースしています。<a href='http://www1.cts.ne.jp/~kimata/shibetsu.htm'>こちら</a>のページを参考にしました。"
+      },
       {
       "type": "Layer",
       "id": "bekkai",
@@ -32,6 +65,17 @@
       "maxZoom": 18,
       "maxNativeZoom": 2,
       "html": "桑園駅から分岐して、北大に暖房用石炭を運び入れていた引き込み線です。地理院地図の空中写真を用いてトレースしています。"
+      },
+      {
+      "type": "Layer",
+      "id": "kamiiso",
+      "title": "上磯駅からの専用線",
+      "url": "./xyz/kamiiso/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "上磯駅から出ていた専用線です（細かい情報は未確認）。細かい配線等省略しています。地理院地図の空中写真を用いてトレースしています。<a href='http://www1.cts.ne.jp/~kimata/shibetsu.htm'>こちら</a>のページを参考にしました。"
       },
       {
       "type": "Layer",
