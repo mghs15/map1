@@ -9,7 +9,7 @@
       "minZoom": 2,
       "maxZoom": 18,
       "maxNativeZoom": 2,
-      "html": "根北線です。未成線部分は途中かなりあやふやです。地理院地図の空中写真を用いてトレースしています。<a href='http://www1.cts.ne.jp/~kimata/shibetsu.htm'>こちら</a>のページを参考にしました。"
+      "html": "根北線です。未成線部分は途中かなりあやふやです。地理院地図の空中写真を用いてトレースしています。"
       },
       {
       "type": "Layer",
@@ -20,7 +20,7 @@
       "minZoom": 2,
       "maxZoom": 18,
       "maxNativeZoom": 2,
-      "html": "夕張鉄道線です。細かい配線等省略しています。地理院地図の空中写真を用いてトレースしています。<a href='http://www1.cts.ne.jp/~kimata/shibetsu.htm'>こちら</a>のページを参考にしました。"
+      "html": "夕張鉄道線です。細かい配線等省略しています。地理院地図の空中写真を用いてトレースしています。"
       },
       {
       "type": "Layer",
@@ -31,7 +31,7 @@
       "minZoom": 2,
       "maxZoom": 18,
       "maxNativeZoom": 2,
-      "html": "三菱鉱業大夕張鉄道線です。細かい配線等省略しています。地理院地図の空中写真を用いてトレースしています。<a href='http://www1.cts.ne.jp/~kimata/shibetsu.htm'>こちら</a>のページを参考にしました。"
+      "html": "三菱鉱業大夕張鉄道線です。細かい配線等省略しています。地理院地図の空中写真を用いてトレースしています。"
       },
       {
       "type": "Layer",
