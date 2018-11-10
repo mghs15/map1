@@ -53,7 +53,7 @@
       "minZoom": 2,
       "maxZoom": 18,
       "maxNativeZoom": 2,
-      "html": "別海村営軌道です。途中かなりあやふやです。地理院地図の空中写真を用いてトレースしています。<a href='http://www1.cts.ne.jp/~kimata/shibetsu.htm'>こちら</a>のページを参考にしました。"
+      "html": "別海村営軌道です。途中かなりあやふやです。地理院地図の空中写真を用いてトレースしています。<a href='http://www1.cts.ne.jp/~kimata/shibetsu.htm' target='_blank'>こちら</a>のページを参考にしました。"
       },
       {
       "type": "Layer",
@@ -64,7 +64,7 @@
       "minZoom": 2,
       "maxZoom": 18,
       "maxNativeZoom": 2,
-      "html": "茶内駅に接続していた浜中町営軌道です。地理院地図の空中写真を用いてトレースしています。<a href='http://tsushima-keibendo.a.la9.jp/hamanaka/hamanaka.html'>こちら</a>のページを参考にしました。"
+      "html": "茶内駅に接続していた浜中町営軌道です。地理院地図の空中写真を用いてトレースしています。<a href='http://tsushima-keibendo.a.la9.jp/hamanaka/hamanaka.html' target='_blank'>こちら</a>のページを参考にしました。"
       },
       {
       "type": "Layer",
@@ -86,7 +86,7 @@
       "minZoom": 2,
       "maxZoom": 18,
       "maxNativeZoom": 2,
-      "html": "上磯駅から出ていた専用線です（細かい情報は未確認）。細かい配線等省略しています。地理院地図の空中写真を用いてトレースしています。<a href='http://www1.cts.ne.jp/~kimata/shibetsu.htm'>こちら</a>のページを参考にしました。"
+      "html": "上磯駅から出ていた専用線です（細かい情報は未確認）。細かい配線等省略しています。地理院地図の空中写真を用いてトレースしています。"
       },
       {
       "type": "Layer",

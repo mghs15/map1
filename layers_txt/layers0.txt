@@ -8,7 +8,7 @@
       "cocotile": true,
       "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#std",
       "errorTileUrl": "./image/map/no-data-std.png",
-"html": "<a href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>国土地理院コンテンツ利用規約</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+"html": "<a href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'>国土地理院コンテンツ利用規約</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
     },
     {
       "type": "Layer",
@@ -18,7 +18,7 @@
       "cocotile": true,
       "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#pale",
       "errorTileUrl": "./image/map/no-data-pale.png",
-"html": "<a href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>国土地理院コンテンツ利用規約</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+"html": "<a href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'>国土地理院コンテンツ利用規約</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
     },
     {
       "type": "Layer",
@@ -29,7 +29,7 @@
       "maxNativeZoom": 14,
       "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#blank",
       "errorTileUrl": "./image/map/no-data-blank.png",
-"html": "<a href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>国土地理院コンテンツ利用規約</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+"html": "<a href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'>国土地理院コンテンツ利用規約</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
     },
     {
       "type": "Layer",
@@ -40,7 +40,7 @@
       "maxNativeZoom": 11,
       "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#english",
       "errorTileUrl": "./image/map/no-data-english.png",
-"html": "<a href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>国土地理院コンテンツ利用規約</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+"html": "<a href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'>国土地理院コンテンツ利用規約</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
     },
     {
       "type": "Layer",
@@ -50,7 +50,7 @@
       "cocotile": true,
       "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#seamlessphoto",
       "errorTileUrl": "./image/map/no-data-ort.png",
-"html": "<a href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>国土地理院コンテンツ利用規約</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+"html": "<a href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'>国土地理院コンテンツ利用規約</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
     },
     {
       "type": "Layer",
