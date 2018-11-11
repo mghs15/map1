@@ -4,13 +4,15 @@ geojsonOptions:{
   pointToLayer: function (feature, latlng) {
     var imgel = "<img src='" + feature.properties['_iconUrl'] + "' style='margin:0px; width:13px; height:13px;' class='leaflet-marker-icon'></img>";
     var spanel = "<span style='position:absolute; left:13px; top:-4px;'>" + feature.properties["name"] + "</span>";
-    var spanel2 = "<span style='position:absolute; left:13px; top:-4px;'>" +  feature.properties["number"] + "</span>";
+    var spanel2 = "";
     var htmlel = "";
     var z = GSI.GLOBALS.map.getZoom();
     if(z < 7) {
       spanel = "";
     }
     if(!feature.properties["name"]) {
+      spanel = "";
+      spanel2 = "<span style='position:absolute; left:13px; top:-4px;'>" +  feature.properties["number"] + "</span>";
     if(z < 12) {
       imgel = "";
       spanel2 = "";
