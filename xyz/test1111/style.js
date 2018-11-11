@@ -29,9 +29,9 @@ geojsonOptions:{
     for(name in feature.properties) {
       if(!name.match(/^_/)){
         if(name=="name"){
-          s += "<tr><th colspan='2' style='font-size:14px; font-weight:bold; color:#000000;'>" + feature.properties[name] + "</th></tr>";
+          s += "<tr><th colspan='2' style='font-size:14px; font-weight:bold; color:#0000ff;'>" + feature.properties[name] + "</th></tr>";
         }else if(name=="number"){
-          s += "<tr><td colspan='2' style='font-size:14px; color:#000000;'>" + feature.properties[name] + "</td></tr>";
+          s += "<tr><td colspan='2' style='font-size:14px; font-weight:bold; color:#ff0000;'>" + feature.properties[name] + "</td></tr>";
         }else if(name=="description"){
           s += "<tr><td colspan='2' style='font-size:14px; color:#000000;'>" + feature.properties[name] + "</td></tr>";
         }
