@@ -24,6 +24,7 @@ geojsonOptions:{
     var s = "<table>";
     var photoFlg = false;
 
+    if(feature.properties["name"]) {
     for(name in feature.properties) {
       if(!name.match(/^_/)){
         if(name=="name"){
@@ -31,8 +32,13 @@ geojsonOptions:{
         }else if(name=="description"){
           s += "<tr><td colspan='2' style='font-size:14px; color:#000000;'>" + feature.properties[name] + "</td></tr>";
         }
+        else{
+          s += "<tr><td style='vertical-align:top; font-size:14px; color:#0000ff;'>" + name + "</td>"
+               + "<td style='font-size:14px; color:#000000;'>" + feature.properties[name] + "</td></tr>";
+        }
       }
-    }
+    }}
+    if(feature.properties["number"]) {
     for(number in feature.properties) {
       if(!number.match(/^_/)){
         if(name=="number"){
@@ -40,8 +46,12 @@ geojsonOptions:{
         }else if(name=="description"){
           s += "<tr><td colspan='2' style='font-size:14px; color:#000000;'>" +  feature.properties[number] + "</td></tr>";
         }
+        else{
+          s += "<tr><td style='vertical-align:top; font-size:14px; color:#0000ff;'>" + number + "</td>"
+               + "<td style='font-size:14px; color:#000000;'>" + feature.properties[number] + "</td></tr>";
+        }
       }
-    }
+    }}
     s += "</table>";
     if(s != "<table></table>"){
       layer.bindPopup(s,{maxWidth:500});
