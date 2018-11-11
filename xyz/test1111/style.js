@@ -3,9 +3,7 @@
 geojsonOptions:{
   pointToLayer: function (feature, latlng) {
     var imgel = "<img src='" + feature.properties['_iconUrl'] + "' style='margin:0px; width:13px; height:13px;' class='leaflet-marker-icon'></img>";
-    var spanel = "<span style='position:absolute; left:13px; top:-4px;'>" + feature.properties["name"] + "</span>";
-
-    var spanel2 = "<span style='position:absolute; left:13px; top:-4px;'>" + feature.properties["name"] + "</span>";
+    var spanel = "<span style='position:absolute; left:13px; top:-4px;'>" + feature.properties["name"] + feature.properties["number"] + "</span>";
     var htmlel = "";
     var z = GSI.GLOBALS.map.getZoom();
     if(z < 7) {
@@ -14,7 +12,7 @@ geojsonOptions:{
     if(!feature.properties["name"]) {
     if(z < 12) {
       imgel = "";
-      spanel2 = "";
+      spanel = "";
     }}
     htmlel = imgel + spanel + spanel2;
     var myIcon = L.divIcon({html:htmlel, className:"gsi-div-icon", iconAnchor: [7, 7], iconSize: [13, 13]});
