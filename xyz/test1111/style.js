@@ -26,6 +26,7 @@ geojsonOptions:{
     var s = "<table>";
     var photoFlg = false;
 
+
     for(name in feature.properties) {
       if(!name.match(/^_/)){
         if(name=="name"){
@@ -38,7 +39,7 @@ geojsonOptions:{
                + "<td style='font-size:14px; color:#000000;'>" + feature.properties[name] + "</td></tr>";
         }
       }
-    }}
+    }
     for(number in feature.properties) {
       if(!number.match(/^_/)){
         if(name=="number"){
@@ -51,7 +52,7 @@ geojsonOptions:{
                + "<td style='font-size:14px; color:#000000;'>" + feature.properties[number] + "</td></tr>";
         }
       }
-    }}
+    }
     s += "</table>";
     if(s != "<table></table>"){
       layer.bindPopup(s,{maxWidth:500});
