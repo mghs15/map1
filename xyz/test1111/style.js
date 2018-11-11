@@ -31,9 +31,6 @@ geojsonOptions:{
         }else if(name=="description"){
           s += "<tr><td colspan='2' style='font-size:14px; color:#000000;'>" + feature.properties[name] + "</td></tr>";
         }
-        }else if(name=="number"){
-          s += "<tr><td colspan='2' style='font-size:14px; color:#000000;'>" + feature.properties[name] + "</td></tr>";
-        }
         else{
           s += "<tr><td style='vertical-align:top; font-size:14px; color:#0000ff;'>" + name + "</td>"
                + "<td style='font-size:14px; color:#000000;'>" + feature.properties[name] + "</td></tr>";
@@ -46,9 +43,6 @@ geojsonOptions:{
           s += "<tr><th colspan='2' style='font-size:14px; font-weight:bold; color:#000000;'>" + feature.properties[number] + "</th></tr>";
         }else if(name=="description"){
           s += "<tr><td colspan='2' style='font-size:14px; color:#000000;'>" +  feature.properties[number] + "</td></tr>";
-        }
-        }else if(name=="number"){
-          s += "<tr><td colspan='2' style='font-size:14px; color:#000000;'>" + feature.properties[number] + "</td></tr>";
         }
         else{
           s += "<tr><td style='vertical-align:top; font-size:14px; color:#0000ff;'>" + number + "</td>"
