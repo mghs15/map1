@@ -13,7 +13,7 @@ geojsonOptions:{
     if(!feature.properties["name"]) {
       spanel = "";
       spanel2 = "<span style='position:absolute; left:13px; top:-4px;'>" +  feature.properties["number"] + "</span>";
-    if(z < 10) {
+    if(z < 12) {
       imgel = "";
       spanel2 = "";
     }}
