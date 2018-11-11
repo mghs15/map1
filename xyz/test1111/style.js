@@ -34,23 +34,19 @@ geojsonOptions:{
         }else if(name=="description"){
           s += "<tr><td colspan='2' style='font-size:14px; color:#000000;'>" + feature.properties[name] + "</td></tr>";
         }
-        else{
-          s += "<tr><td style='vertical-align:top; font-size:14px; color:#0000ff;'>" + name + "</td>"
-               + "<td style='font-size:14px; color:#000000;'>" + feature.properties[name] + "</td></tr>";
-        }
       }
     }
     for(number in feature.properties) {
       if(!number.match(/^_/)){
-        if(name=="number"){
+        if(number=="number"){
           s += "<tr><th colspan='2' style='font-size:14px; font-weight:bold; color:#000000;'>" + feature.properties[number] + "</th></tr>";
-        }else if(name=="description"){
+        }else if(number=="description"){
           s += "<tr><td colspan='2' style='font-size:14px; color:#000000;'>" +  feature.properties[number] + "</td></tr>";
         }
-        else{
+/*        else{
           s += "<tr><td style='vertical-align:top; font-size:14px; color:#0000ff;'>" + number + "</td>"
                + "<td style='font-size:14px; color:#000000;'>" + feature.properties[number] + "</td></tr>";
-        }
+        }*/
       }
     }
     s += "</table>";
