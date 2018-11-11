@@ -1,0 +1,51 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "テスト１",
+        "_markerType": "Icon",
+        "_iconUrl": "//maps.gsi.go.jp/portal/sys/v4/symbols/654.png",
+        "_iconSize": [
+          13,
+          13
+        ],
+        "_iconAnchor": [
+          7,
+          7
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.858333333333,
+          43.209444444445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "number": "試験１",
+        "_markerType": "Icon",
+        "_iconUrl": "//maps.gsi.go.jp/portal/sys/v4/symbols/654.png",
+        "_iconSize": [
+          13,
+          13
+        ],
+        "_iconAnchor": [
+          7,
+          7
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.859166666667,
+          40.8975
+        ]
+      }
+    }
+  ]
+}

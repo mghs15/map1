@@ -142,6 +142,17 @@
       "maxZoom": 18,
       "maxNativeZoom": 2,
       "html": "佐賀線の廃線跡です。地平時代の佐賀駅、味の素の専用線と思われる路線も取得しています。地理院地図の空中写真を用いてトレースしています。"
+      },
+      {
+      "type": "Layer",
+      "id": "_test1111",
+      "title": "TEST",
+      "url": "./xyz/_test1111/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "試験用です。意味のあるデータではございません。"
       }
   ]
 }
