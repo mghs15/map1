@@ -5,6 +5,10 @@
       "type": "Feature",
       "properties": {
         "name": "テスト１",
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "<a href=\"https://www.yahoo.co.jp/\">ページ</a>",
         "_markerType": "Icon",
         "_iconUrl": "//maps.gsi.go.jp/portal/sys/v4/symbols/654.png",
         "_iconSize": [
@@ -28,6 +32,10 @@
       "type": "Feature",
       "properties": {
         "number": "試験１",
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "<a href=\"https://www.yahoo.co.jp/\">ページ</a>",
         "_markerType": "Icon",
         "_iconUrl": "//maps.gsi.go.jp/portal/sys/v4/symbols/081.png",
         "_iconSize": [
