@@ -13,7 +13,7 @@ geojsonOptions:{
     if(!feature.properties["name"]) {
       spanel = "";
       spanel2 = "<span style='position:absolute; left:13px; top:-4px;'>" +  feature.properties["number"] + "</span>";
-    if(z < 12) {
+    if(z < 10) {
       imgel = "";
       spanel2 = "";
     }}
@@ -26,7 +26,6 @@ geojsonOptions:{
     var s = "<table>";
     var photoFlg = false;
 
-    if(feature.properties["name"]) {
     for(name in feature.properties) {
       if(!name.match(/^_/)){
         if(name=="name"){
@@ -40,7 +39,6 @@ geojsonOptions:{
         }
       }
     }}
-    if(feature.properties["number"]) {
     for(number in feature.properties) {
       if(!number.match(/^_/)){
         if(name=="number"){
