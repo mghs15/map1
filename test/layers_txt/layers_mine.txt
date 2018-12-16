@@ -1,0 +1,158 @@
+﻿{
+  "layers": [
+      {
+      "type": "Layer",
+      "id": "konpoku",
+      "title": "根北線",
+      "url": "./xyz/konpoku/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "根北線です。未成線部分は途中かなりあやふやです。地理院地図の空中写真を用いてトレースしています。"
+      },
+      {
+      "type": "Layer",
+      "id": "yubari",
+      "title": "夕張鉄道",
+      "url": "./xyz/yubari/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "夕張鉄道線です。細かい配線等省略しています。地理院地図の空中写真を用いてトレースしています。"
+      },
+      {
+      "type": "Layer",
+      "id": "ooyubari",
+      "title": "三菱鉱業大夕張鉄道",
+      "url": "./xyz/ooyubari/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "三菱鉱業大夕張鉄道線です。細かい配線等省略しています。地理院地図の空中写真を用いてトレースしています。"
+      },
+      {
+      "type": "Layer",
+      "id": "noborikawa",
+      "title": "国鉄夕張線登川支線",
+      "url": "./xyz/noborikawa/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "国鉄夕張線登川支線です。紅葉山、楓、登川の3駅もポイントで記載しました。細かい配線等省略しています。地理院地図の空中写真を用いてトレースしています。"
+      },
+      {
+      "type": "Layer",
+      "id": "bekkai",
+      "title": "別海村営軌道",
+      "url": "./xyz/bekkai/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "別海村営軌道です。途中かなりあやふやです。地理院地図の空中写真を用いてトレースしています。<a href='http://www1.cts.ne.jp/~kimata/shibetsu.htm' target='_blank'>こちら</a>のページを参考にしました。"
+      },
+      {
+      "type": "Layer",
+      "id": "hamanaka",
+      "title": "浜中町営軌道",
+      "url": "./xyz/hamanaka/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "茶内駅に接続していた浜中町営軌道です。地理院地図の空中写真を用いてトレースしています。<a href='http://tsushima-keibendo.a.la9.jp/hamanaka/hamanaka.html' target='_blank'>こちら</a>のページを参考にしました。"
+      },
+      {
+      "type": "Layer",
+      "id": "hokudai",
+      "title": "北海道大学引込み線跡",
+      "url": "./xyz/hokudai/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "桑園駅から分岐して、北大に暖房用石炭を運び入れていた引き込み線です。地理院地図の空中写真を用いてトレースしています。"
+      },
+      {
+      "type": "Layer",
+      "id": "kamiiso",
+      "title": "上磯駅からの専用線",
+      "url": "./xyz/kamiiso/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "上磯駅から出ていた専用線です（細かい情報は未確認）。細かい配線等省略しています。地理院地図の空中写真を用いてトレースしています。"
+      },
+      {
+      "type": "Layer",
+      "id": "agatsuma",
+      "title": "吾妻線旧線",
+      "url": "./xyz/agatsuma/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "八ッ場ダム建設に伴い、移設された吾妻線旧線部分です。地理院地図の空中写真を用いてトレースしています。"
+      },
+      {
+      "type": "Layer",
+      "id": "jobu",
+      "title": "上武鉄道配線跡",
+      "url": "./xyz/jobu/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "上武鉄道（旧日本ニッケル線）の廃線跡です。地理院地図の空中写真を用いてトレースしています。"
+      },
+      {
+      "type": "Layer",
+      "id": "kurekichi",
+      "title": "呉基地引込み線跡",
+      "url": "./xyz/kurekichi/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "呉基地にかつて引かれていた引込み線を再現しました。資料は国土地理院の地理院地図で提供されている単写真（1947年に米軍撮影のもの）です。かなり大雑把に取得しています。また、現在の日新製鉄内（赤いポリゴン内）の取得は諦めました。ご了承ください。"
+      },
+      {
+      "type": "Layer",
+      "id": "kitetsu_haisen",
+      "title": "紀州鉄道廃線部分",
+      "url": "./xyz/kitetsu_haisen/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "紀州鉄道の廃線跡です。西の路線は、工場への引き込み線です。地理院地図の空中写真を用いてトレースしています。"
+      },
+      {
+      "type": "Layer",
+      "id": "saga",
+      "title": "佐賀線",
+      "url": "./xyz/saga/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "佐賀線の廃線跡です。地平時代の佐賀駅、味の素の専用線と思われる路線も取得しています。地理院地図の空中写真を用いてトレースしています。"
+      },
+      {
+      "type": "Layer",
+      "id": "test1111",
+      "title": "TEST",
+      "url": "./xyz/test1111/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "試験用です。意味のあるデータではございません。"
+      }
+  ]
+}
