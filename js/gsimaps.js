@@ -28668,8 +28668,8 @@ GSI.MapManager = L.Class.extend( {
 
 		L.control.scale({imperial:false}).addTo(this._map);
 		
-		this._zoomControl = new L.Control.Zoom({position:"bottomleft"});
-		this._map.addControl(this._zoomControl);
+//		this._zoomControl = new L.Control.Zoom({position:"bottomleft"});
+//		this._map.addControl(this._zoomControl);
 		
 		
 		this._mapLayerList = new GSI.MapLayerList(this._gsimaps, this, this._map);
