@@ -17404,7 +17404,7 @@ GSI.MiniMap = L.Class.extend( {
 	{
 		if ( !this.miniMap )
 		{
-			var baseLayer = L.tileLayer('http://tile.openstreetmap.jp/{z}/{x}/{y}.png' );
+			var baseLayer = L.tileLayer('https://b.tile.openstreetmap.org/{z}/{x}/{y}.png' );
 			this.miniMap = new L.Control.MiniMap(baseLayer, { toggleDisplay: false }).addTo(this.map);
 		}
 	},
