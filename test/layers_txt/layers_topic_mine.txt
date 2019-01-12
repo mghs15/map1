@@ -7,6 +7,14 @@
      "toggleall": false,
      "html": "このサイトの独自の情報です。利用は自己責任でお願いいたします。",
      "src": "./layers_mine.txt"
+     },
+    {
+     "type": "LayerGroup",
+     "title": "テスト（開かないでください）",
+     "iconUrl": "./image/system/folder_new.png",
+     "toggleall": false,
+     "html": "試験用です。意味のあるデータではありません。表示等で不具合が生じる可能性もありますので、あまり開かないでください。",
+     "src": "./layers_mine_test.txt"
      }
             ]
 }

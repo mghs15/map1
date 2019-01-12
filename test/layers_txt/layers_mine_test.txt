@@ -1,0 +1,26 @@
+﻿{
+  "layers": [
+      {
+      "type": "Layer",
+      "id": "test1111",
+      "title": "TEST",
+      "url": "./xyz/test1111/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "試験用です。意味のあるデータではございません。"
+      },
+      {
+      "type": "Layer",
+      "id": "test190112",
+      "title": "TEST",
+      "url": "https://mghs15.github.io/geojson-with-style-spec/sample5.geojson,
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "試験用です。意味のあるデータではございません。"
+      }
+  ]
+}
