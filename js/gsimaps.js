@@ -61,7 +61,7 @@ CONFIG.layersTab = null;
 CONFIG.layersTabUrl = "./layers_txt/tab.txt";
 
 CONFIG.layerBase          = ['./layers_txt/layers0.txt'];
-CONFIG.layerBaseDefaultID = "pale";
+CONFIG.layerBaseDefaultID = "osm";
 CONFIG.layerBaseFolder    = "ベースマップ";
 CONFIG.layerBaseFolderSYS = "GSI.MAP.BASE";
 CONFIG.layers = [
@@ -9642,7 +9642,7 @@ GSI.ViewListDialog = GSI.Dialog.extend( {
 	_resetTiles : function()
 	{
 		this._mapManager._baseLayer.setActiveIndex(0);
-		var std = this._mapManager._baseLayer.baseLayerList[0];
+		var std = this._mapManager._baseLayer.baseLayerList[0]; //リセットで変更される先？[]の中を変える（もともとは0）
 		
 		this._removeAll();
 		this.mapLayerList.append( std );
