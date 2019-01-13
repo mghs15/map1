@@ -58,16 +58,7 @@
       "title": "OpenStreetMap",
       "url": "https://b.tile.openstreetmap.org/{z}/{x}/{y}.png",
       "cocotile": true,
-      "html": "OpenStreetMap(OSM)は、道路地図などの地理情報データを誰でも利用できるよう、フリーの地理情報データを作成することを目的としたプロジェクトです。<br><a href='https://openstreetmap.jp/' target='_blank'>OpenStreetMap</a>",
-      "errorTileUrl": "./image/map/no-data.png"
-    },
-    {
-      "type": "Layer",
-      "id": "osm_transport",
-      "title": "OpenStreetMap(Transport)",
-      "url": "https://a.tile.thunderforest.com/transport/{z}/{x}/{y}.png",
-      "cocotile": true,
-      "html": "OpenStreetMap(OSM)は、道路地図などの地理情報データを誰でも利用できるよう、フリーの地理情報データを作成することを目的としたプロジェクトです。<br><a href='https://openstreetmap.jp/' target='_blank'>OpenStreetMap</a>",
+      "html": "OpenStreetMap(OSM)は、道路地図などの地理情報データを誰でも利用できるよう、フリーの地理情報データを作成することを目的としたプロジェクトです。<br><a href='https://openstreetmap.jp/' target='_blank'>OpenStreetMap</a><br>© OpenStreetMap contributors<br><a href='https://www.openstreetmap.org/copyright'>著作権について</a>",
       "errorTileUrl": "./image/map/no-data.png"
     }
   ]
