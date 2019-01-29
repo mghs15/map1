@@ -14,8 +14,19 @@
       {
       "type": "Layer",
       "id": "test190112",
-      "title": "TEST",
+      "title": "TEST0112",
       "url": "https://mghs15.github.io/geojson-with-style-spec/sample5-2.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "試験用です。意味のあるデータではございません。"
+      },
+      {
+      "type": "Layer",
+      "id": "test190129",
+      "title": "TEST0129",
+      "url": "https://mghs15.github.io/geojson-with-style-spec/test0129.geojson",
       "cocotile": false,
       "minZoom": 2,
       "maxZoom": 18,
