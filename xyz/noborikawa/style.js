@@ -20,6 +20,7 @@ geojsonOptions:{
   onEachFeature: function (feature, layer) {
     var s = "<table>";
     var photoFlg = false;
+    s += "<tr><th colspan='2' style='font-size:14px; font-weight:bold; color:#000000;'>登川支線の駅</th></tr>"
 
     for(name in feature.properties) {
       if(!name.match(/^_/)){
