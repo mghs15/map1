@@ -11675,6 +11675,8 @@ Math.pow(x, y) -> x^y
 		var difLon = Math.abs( lon2_pxmeter - lon1_pxmeter );
 		var difX = 1000 * ( difLon / 360 ) * 2 * earthR * Math.cos( lat_rad ) * Math.PI;
 		
+		// 1px相当の大きさ
+		//（地球を真球として計算）
 		this.footerSelector.find( '.latlng_px_meter' ).html(
 			'x = '
 			+ ( Math.round( difX * 1000000 ) / 1000000 ).toFixed(2)
@@ -11682,8 +11684,9 @@ Math.pow(x, y) -> x^y
 			+ ( Math.round( difY * 1000000 ) / 1000000 ).toFixed(2)
 			+ ' [m])'
 //			+ '...debug: ' + lat1_pxmeter + ', ' + lat2_pxmeter + ', ' + TYpx2
-			);
-			
+			;
+		
+		// XYZ座標
 		this.footerSelector.find( '.zxy_coord' ).html(
 			zl + '/' + TX + '/' + TY
 			);
