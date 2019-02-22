@@ -11401,6 +11401,7 @@ GSI.Footer = L.Class.extend( {
 			
 			this.footerSelector.find( '.latlng_60' ).parent().hide();
 			this.footerSelector.find( '.latlng_10' ).parent().hide();
+			this.footerSelector.find( '.latlng_px_meter' ).parent().hide();
 			this.footerSelector.find( '.utm_point' ).parent().hide();
 			this.footerSelector.find( '.address' ).parent().hide();
 			
@@ -11436,6 +11437,7 @@ GSI.Footer = L.Class.extend( {
 		case 2:
 			this.footerSelector.find( '.latlng_60' ).parent().show();
 			this.footerSelector.find( '.latlng_10' ).parent().show();
+			this.footerSelector.find( '.latlng_px_meter' ).parent().show();
 			this.footerSelector.find( '.utm_point' ).parent().show();
 			this.footerSelector.find( '.address' ).parent().show();
 			var oldFooterHeight = footerHeight;
@@ -11584,6 +11586,7 @@ GSI.Footer = L.Class.extend( {
 				
 				this.footerSelector.find( '.latlng_60' ).parent().show();
 				this.footerSelector.find( '.latlng_10' ).parent().show();
+				this.footerSelector.find( '.latlng_px_meter' ).parent().show();
 				this.footerSelector.find( '.utm_point' ).parent().show();
 				this.footerSelector.find( '.address' ).parent().show();
 				var oldFooterHeight = footerHeight;
@@ -11638,6 +11641,48 @@ GSI.Footer = L.Class.extend( {
 			+ ','
 			+ ( Math.round( center.lng * 1000000 ) / 1000000 ).toFixed(6)
 			);
+		
+// mghs 独自 経緯度を含むpxの四方を計算
+/* memo
+Math.PI
+Math.pow(x, y) -> x^y
+*/
+		var earthR = 6378.137;
+		var zl = this.map.getZoom();
+		
+		// Lat <-> Y
+		var lat_rad = center.lat * Math.PI / 180.0;
+		var tileY = ( 1.0 - Math.log( Math.tan( lat_rad ) + (1 / Math.cos( lat_rad ) ) ) / Math.PI ) / 2 * Math.pow( 2 , zl );
+		var TY = Math.floor(tileY);
+		var TYpx1 = Math.floor(tileY * 256);
+		var TYpx2 = TYpx1 + 1;
+		var lat1_pxmeter = Math.atan( Math.sinh( Math.PI - ( TYpx1 / 256 ) * 2 * Math.PI / Math.pow( 2 , zl ) ) ) * 180.0 / Math.PI;
+		var lat2_pxmeter = Math.atan( Math.sinh( Math.PI - ( TYpx2 / 256 ) * 2 * Math.PI / Math.pow( 2 , zl ) ) ) * 180.0 / Math.PI;
+		var difLat = Math.abs( lat1_pxmeter - lat2_pxmeter );
+		var difY = 1000 * ( difLat / 360 ) * 2 * earthR * Math.PI;
+		
+		// Lon <-> X
+//		var lon_rad = center.lng * Math.PI / 180.0;
+		var tileX = ( Math.pow( 2 , zl ) / 2 ) + ( center.lng / 360) * Math.pow( 2 , zl );
+		var TX = Math.floor(tileX);
+		var TXpx1 = Math.floor(tileX * 256);
+		var TXpx2 = TXpx1 + 1;
+		var lon1_pxmeter = ( TXpx1 / 256 ) * 360 / Math.pow( 2 , zl ) - 180.0;
+		var lon2_pxmeter = ( TXpx2 / 256 ) * 360 / Math.pow( 2 , zl ) - 180.0;
+		var difLon = Math.abs( lon2_pxmeter - lon1_pxmeter );
+		var difX = 1000 * ( difLon / 360 ) * 2 * earthR * Math.cos( lat_rad ) * Math.PI;
+		
+		this.footerSelector.find( '.latlng_px_meter' ).html(
+			"(X/Y/Z  = "
+			+ zl + '/' + TX + '/' + TY
+			+ ') : (px_x [m] = '
+			+ ( Math.round( difX * 1000000 ) / 1000000 ).toFixed(2)
+			+ ', px_y [m] = '
+			+ ( Math.round( difY * 1000000 ) / 1000000 ).toFixed(2)
+			+ ') ※日本周辺のみ考慮'
+//			+ '...debug: ' + lat1_pxmeter + ', ' + lat2_pxmeter + ', ' + TYpx2
+			);
+// mghs 独自 ここまで
 
 		var utmPoint = GSI.UTM.Utils.latlng2PointName( center.lat, center.lng );
 		this.footerSelector.find( '.utm_point' ).html( utmPoint == '' ? '---' : utmPoint);
