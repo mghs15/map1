@@ -3,9 +3,9 @@
 geojsonOptions:{
   pointToLayer: function (feature, latlng) {
     var imgel = "<img src='" + feature.properties['_iconUrl'] + "' style='margin:0px; width:13px; height:13px;' class='leaflet-marker-icon'></img>";
-    var spanel = "<span style='position:absolute; left:13px; top:-4px;'>" + feature.properties["name"] + "</span>";
+    var spanel = "<span style='position:absolute; top:-13px;'>" + feature.properties["name"] + "</span>";
     if(feature.properties["name"] == "紅葉山駅") {
-      spanel = "<span style='position:absolute; top:-13px;'>" + feature.properties["name"] + "</span>";
+      spanel = "<span style='position:absolute; right:13px;'>" + feature.properties["name"] + "</span>";
     }
     var htmlel = "";
     var z = GSI.GLOBALS.map.getZoom();
