@@ -11654,15 +11654,18 @@ Math.pow(x, y) -> x^y
 		var zl = this.map.getZoom();
 		
 		// Lat <-> Y
-		var lat_rad = center.lat * Math.PI / 180.0;
-		var tileY = ( 1.0 - Math.log( Math.tan( lat_rad ) + (1 / Math.cos( lat_rad ) ) ) / Math.PI ) / 2 * Math.pow( 2 , zl );
-		var TY = Math.floor(tileY);
-		var TYpx1 = Math.floor(tileY * 256);
-		var TYpx2 = TYpx1 + 1;
-		var lat1_pxmeter = Math.atan( Math.sinh( Math.PI - ( TYpx1 / 256 ) * 2 * Math.PI / Math.pow( 2 , zl ) ) ) * 180.0 / Math.PI;
-		var lat2_pxmeter = Math.atan( Math.sinh( Math.PI - ( TYpx2 / 256 ) * 2 * Math.PI / Math.pow( 2 , zl ) ) ) * 180.0 / Math.PI;
-		var difLat = Math.abs( lat1_pxmeter - lat2_pxmeter );
-		var difY = 1000 * ( difLat / 360 ) * 2 * earthR * Math.PI;
+		var lat_rad = center.lat * Math.PI / 180.0; //緯度のみラジアンに
+		var tileY = ( 1.0 - Math.log( Math.tan( lat_rad ) + (1 / Math.cos( lat_rad ) ) ) / Math.PI ) / 2 * Math.pow( 2 , zl ); //タイル座標を少数点も込みで→ピクセル座標計算のため
+		var TY = Math.floor(tileY); //（本当の）タイル座標
+		var TYpx1 = Math.floor(tileY * 256); //ピクセル座標へ
+		var TYpx2 = TYpx1 + 1; //隣のピクセル座標
+		var lat1_pxmeter = Math.atan( Math.sinh( Math.PI - ( TYpx1 / 256 ) * 2 * Math.PI / Math.pow( 2 , zl ) ) ) * 180.0 / Math.PI;  //ピクセル座標から緯度へ
+		var lat2_pxmeter = Math.atan( Math.sinh( Math.PI - ( TYpx2 / 256 ) * 2 * Math.PI / Math.pow( 2 , zl ) ) ) * 180.0 / Math.PI; //ピクセル座標から緯度へ
+		var difLat = Math.abs( lat1_pxmeter - lat2_pxmeter ); //隣り合うピクセル同士の緯度差
+		var difY = 1000 * ( difLat / 360 ) * 2 * earthR * Math.PI; //経度差から距離（円弧）を求める
+		var exp_Y = Math.floor( Math.log10( difY ) ); //指数部分
+		var Y_10 = Math.pow( 10 , exp_Y ); //10の指数乗
+
 		
 		// Lon <-> X
 //		var lon_rad = center.lng * Math.PI / 180.0;
@@ -11674,17 +11677,28 @@ Math.pow(x, y) -> x^y
 		var lon2_pxmeter = ( TXpx2 / 256 ) * 360 / Math.pow( 2 , zl ) - 180.0;
 		var difLon = Math.abs( lon2_pxmeter - lon1_pxmeter );
 		var difX = 1000 * ( difLon / 360 ) * 2 * earthR * Math.cos( lat_rad ) * Math.PI;
+		var exp_X = Math.floor( Math.log10( difX ) );
+		var X_10 = Math.pow( 10 , exp_X );
 		
 		// 1px相当の大きさ
 		//（地球を真球として計算）
 		this.footerSelector.find( '.latlng_px_meter' ).html(
-			'x = '
+//			'x = ' + 
+			( Math.round( difX * 1000000 ) / ( X_10 * 1000000 ) ).toFixed(2)
+			+ ' × 10<sup>' + exp_X + '</sup> [m]'
+/*			+ ', y = '
+			+ ( Math.round( difY * 1000000 ) / ( Y_10 * 1000000 ) ).toFixed(2)
+			+ ' × 10<sup>' + exp_Y + '</sup> [m])'
+
+			+ '<br> ...debug: '
 			+ ( Math.round( difX * 1000000 ) / 1000000 ).toFixed(2)
 			+ ' [m], y = '
 			+ ( Math.round( difY * 1000000 ) / 1000000 ).toFixed(2)
 			+ ' [m])'
-//			+ '...debug: ' + lat1_pxmeter + ', ' + lat2_pxmeter + ', ' + TYpx2
-			;
+
+			+ '<br> ...debug: ' + Math.round( difX * 100 ) + ', ' + difX + ', ' + ( Math.round( difX * 1000000 ) / 1000000 ).toFixed(2)
+*/
+			);
 		
 		// XYZ座標
 		this.footerSelector.find( '.zxy_coord' ).html(
