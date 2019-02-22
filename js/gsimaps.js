@@ -11402,6 +11402,7 @@ GSI.Footer = L.Class.extend( {
 			this.footerSelector.find( '.latlng_60' ).parent().hide();
 			this.footerSelector.find( '.latlng_10' ).parent().hide();
 			this.footerSelector.find( '.latlng_px_meter' ).parent().hide();
+			this.footerSelector.find( '.zxy_coord' ).parent().hide();
 			this.footerSelector.find( '.utm_point' ).parent().hide();
 			this.footerSelector.find( '.address' ).parent().hide();
 			
@@ -11438,6 +11439,7 @@ GSI.Footer = L.Class.extend( {
 			this.footerSelector.find( '.latlng_60' ).parent().show();
 			this.footerSelector.find( '.latlng_10' ).parent().show();
 			this.footerSelector.find( '.latlng_px_meter' ).parent().show();
+			this.footerSelector.find( '.zxy_coord' ).parent().show();
 			this.footerSelector.find( '.utm_point' ).parent().show();
 			this.footerSelector.find( '.address' ).parent().show();
 			var oldFooterHeight = footerHeight;
@@ -11587,6 +11589,7 @@ GSI.Footer = L.Class.extend( {
 				this.footerSelector.find( '.latlng_60' ).parent().show();
 				this.footerSelector.find( '.latlng_10' ).parent().show();
 				this.footerSelector.find( '.latlng_px_meter' ).parent().show();
+				this.footerSelector.find( '.zxy_coord' ).parent().show();
 				this.footerSelector.find( '.utm_point' ).parent().show();
 				this.footerSelector.find( '.address' ).parent().show();
 				var oldFooterHeight = footerHeight;
@@ -11673,15 +11676,19 @@ Math.pow(x, y) -> x^y
 		var difX = 1000 * ( difLon / 360 ) * 2 * earthR * Math.cos( lat_rad ) * Math.PI;
 		
 		this.footerSelector.find( '.latlng_px_meter' ).html(
-			"(X/Y/Z  = "
-			+ zl + '/' + TX + '/' + TY
-			+ ') : (px_x [m] = '
+			'x = '
 			+ ( Math.round( difX * 1000000 ) / 1000000 ).toFixed(2)
-			+ ', px_y [m] = '
+			+ ' [m], y = '
 			+ ( Math.round( difY * 1000000 ) / 1000000 ).toFixed(2)
-			+ ') ※日本周辺のみ考慮'
+			+ ' [m])'
 //			+ '...debug: ' + lat1_pxmeter + ', ' + lat2_pxmeter + ', ' + TYpx2
 			);
+			
+		this.footerSelector.find( '.zxy_coord' ).html(
+			zl + '/' + TX + '/' + TY
+			);
+			
+		
 // mghs 独自 ここまで
 
 		var utmPoint = GSI.UTM.Utils.latlng2PointName( center.lat, center.lng );
