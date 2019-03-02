@@ -4,14 +4,14 @@
 		"type": "LayerGroup",
 		"title": "標高タイル",
 		"toggleall": false,
-		"html": "国土地理院が提供する標高タイルをそのまま表示させます。",
+		"html": "国土地理院が提供する<a href='https://maps.gsi.go.jp/development/ichiran.html#dem'>標高タイル</a>をそのまま表示させます。",
 		"src": "./layers_invisible.txt"
         },
         {
 		"type": "LayerGroup",
 		"title": "ベースマップ",
 		"toggleall": false,
-		"html": "ベースマップを重ね合わせられるようにしたものです。",
+		"html": "ベースマップを重ね合わせられるようにしたものです。各データの利用規約を遵守下さい。",
 		"src": "./layers0.txt"
         }
             ]

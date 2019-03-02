@@ -71,6 +71,9 @@ CONFIG.layers = [
 	},
 	{
 		"url":'./layers_txt/layers_topic_gsi.txt'
+	},
+	{
+		"url":'./layers_txt/layers_topic_developers.txt'
 	}
 ];
 

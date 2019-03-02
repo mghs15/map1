@@ -5,21 +5,14 @@
      "title": "オリジナル重ね合わせ情報",
      "iconUrl": "./image/system/folder_new.png",
      "toggleall": false,
-     "html": "このサイトの独自の情報です。利用は自己責任でお願いいたします。",
+     "html": "このサイトの独自に提供する情報です。利用は自己責任でお願いいたします。",
       "entries": [
         {
 		"type": "LayerGroup",
 		"title": "全国廃線跡",
 		"toggleall": false,
-		"html": "空中写真等を用いて、廃線路線跡地をトレースしました。対象は全国です。",
+		"html": "空中写真等を用いて、廃線路線跡地をトレースしました。全国各地から、気の向くままに。",
 		"src": "./layers_wasteline.txt"
-        },
-        {
-		"type": "LayerGroup",
-		"title": "デベロッパー用",
-		"toggleall": false,
-		"html": "主に開発の際に必要なデータや、テストデータです。",
-		"src": "./layers_developers.txt"
         }
       ]
      }
