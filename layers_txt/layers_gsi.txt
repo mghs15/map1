@@ -1,0 +1,58 @@
+﻿{
+  "layers": [
+    {
+     "type": "LayerGroup",
+     "title": "空中写真・衛星画像",
+     "toggleall": false,
+     "src": "./layers1.txt"
+     },
+    {
+     "type": "LayerGroup",
+     "title": "主題図",
+     "toggleall": false,
+     "src": "./layers2.txt"
+     },
+    {
+     "type": "LayerGroup",
+     "title": "基準点・測地観測",
+     "toggleall": false,
+     "src": "./layers3.txt"
+     },
+    {
+     "type": "LayerGroup",
+     "title": "地震、台風・豪雨等、火山",
+     "toggleall": false,
+     "src": "./layers4.txt"
+     },
+    {
+     "type": "LayerGroup",
+     "title": "指定緊急避難場所",
+     "toggleall": false,
+     "src": "./layers_skhb.txt"
+     },
+    {
+     "type": "LayerGroup",
+     "title": "南極の地理空間情報",
+     "toggleall": false,
+     "src": "./layers_antarctic.txt"
+     },
+    {
+     "type": "LayerGroup",
+     "title": " 地理教育の道具箱",
+     "toggleall": false,
+     "src": "./layers_topic_chirikyoiku.txt"
+     },
+    {
+     "type": "LayerGroup",
+     "title": "他機関の情報",
+     "toggleall": false,
+     "src": "./layers5.txt"
+     },
+    {
+     "type": "LayerGroup",
+     "title": "ベクトルタイル提供実験",
+     "toggleall": false,
+     "src": "./layers_experimental.txt"
+     }
+            ]
+}

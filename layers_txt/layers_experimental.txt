@@ -2,7 +2,7 @@
   "layers": [
     {
       "type": "LayerGroup",
-      "title": "ベクトルタイル提供実験（国土地理院）",
+      "title": "ベクトルタイル提供実験",
       "toggleall": false,
       "entries": [
         {

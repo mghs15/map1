@@ -57,7 +57,7 @@ CONFIG.layersTab = [
 ];
 */
 
-CONFIG.layersTab = null;
+CONFIG.layersTab = true;
 CONFIG.layersTabUrl = "./layers_txt/tab.txt";
 
 CONFIG.layerBase          = ['./layers_txt/layers0.txt'];
@@ -67,35 +67,11 @@ CONFIG.layerBaseFolderSYS = "GSI.MAP.BASE";
 CONFIG.layers = [
 	{
 		"top":true,
-		"url":'./layers_txt/layers_topic_new.txt'
-	},
-	{
 		"url":'./layers_txt/layers_topic_mine.txt'
 	},
 	{
-		"url":'./layers_txt/layers1.txt'
-	},/*
-	{
-		"url":'./layers_txt/layers2.txt'
-	},
-	{
-		"url":'./layers_txt/layers3.txt'
-	},
-	{
-		"url":'./layers_txt/layers4.txt'
-	},
-	{
-		"url":'./layers_txt/layers_skhb.txt'
-	},
-	{
-		"url":'./layers_txt/layers_topic_chirikyoiku.txt'
-	},*/
-	{
-		"url":'./layers_txt/layers5.txt'
-	}/*,
-	{
-		"url":'./layers_txt/layers_experimental.txt'
-	}*/
+		"url":'./layers_txt/layers_topic_gsi.txt'
+	}
 ];
 
 CONFIG.layerEvacuationFolder = "指定緊急避難場所";
@@ -11665,6 +11641,7 @@ Math.pow(x, y) -> x^y
 		var difY = 1000 * ( difLat / 360 ) * 2 * earthR * Math.PI; //経度差から距離（円弧）を求める
 		var exp_Y = Math.floor( Math.log10( difY ) ); //指数部分
 		var Y_10 = Math.pow( 10 , exp_Y ); //10の指数乗
+		var TYpx_output = Math.ceil(( tileY - TY ) * 256);
 
 		
 		// Lon <-> X
@@ -11679,6 +11656,7 @@ Math.pow(x, y) -> x^y
 		var difX = 1000 * ( difLon / 360 ) * 2 * earthR * Math.cos( lat_rad ) * Math.PI;
 		var exp_X = Math.floor( Math.log10( difX ) );
 		var X_10 = Math.pow( 10 , exp_X );
+		var TXpx_output = Math.ceil(( tileX - TX ) * 256); //切り上げて返す
 		
 		// 1px相当の大きさ
 		//（地球を真球として計算）
@@ -11702,7 +11680,7 @@ Math.pow(x, y) -> x^y
 		
 		// XYZ座標
 		this.footerSelector.find( '.zxy_coord' ).html(
-			zl + '/' + TX + '/' + TY
+			zl + '/' + TX + '/' + TY + ', ' + TXpx_output +  '/' + TYpx_output
 			);
 			
 		
