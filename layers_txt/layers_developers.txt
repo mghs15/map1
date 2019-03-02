@@ -12,7 +12,7 @@
 		"title": "ベースマップ",
 		"toggleall": false,
 		"html": "ベースマップを重ね合わせられるようにしたものです。各データの利用規約を遵守下さい。",
-		"src": "./layers0.txt"
+		"src": "./layers_basemap.txt"
         }
             ]
 }
