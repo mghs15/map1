@@ -13,6 +13,13 @@
 		"toggleall": false,
 		"html": "ベースマップを重ね合わせられるようにしたものです。各データの利用規約を遵守下さい。",
 		"src": "./layers_basemap.txt"
+        },
+        {
+		"type": "LayerGroup",
+		"title": "くりかえし",
+		"toggleall": false,
+		"html": "このフォルダをもう一度、下の階層として開きます。",
+		"src": "./layers_developers.txt"
         }
             ]
 }
