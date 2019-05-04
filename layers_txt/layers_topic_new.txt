@@ -18,7 +18,7 @@
           "maxZoom": 18,
           "maxNativeZoom": 15,
           "legendUrl": "",
-          "html": "<div class=\"gsi_layerinfo_title\">自分で作る色別標高図</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+          "html": "<div class=\"gsi_layerinfo_title\">自分で作る色別標高図</div><div class=\"gsi_layerinfo_kaisetu\">データ作成方法の違いにより水部とその周辺等で不自然な標高差が生じる場合がありますのでご注意ください。</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
         },
         {
           "type": "Layer",

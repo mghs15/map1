@@ -13,6 +13,17 @@
       },
       {
       "type": "Layer",
+      "id": "rumoi",
+      "title": "留萌本線（留萌-増毛）",
+      "url": "./xyz/rumoi/{z}/{x}/{y}.geojson",
+      "cocotile": false,
+      "minZoom": 2,
+      "maxZoom": 18,
+      "maxNativeZoom": 2,
+      "html": "留萌本線（留萌-増毛）です。地理院地図の空中写真を用いてトレースしています。"
+      },
+      {
+      "type": "Layer",
       "id": "yubari",
       "title": "夕張鉄道",
       "url": "./xyz/yubari/{z}/{x}/{y}.geojson",

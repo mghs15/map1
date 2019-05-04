@@ -1,0 +1,11 @@
+﻿{
+  "layers": [
+    {
+     "type": "LayerGroup",
+     "title": "国土地理院提供の情報",
+     "toggleall": false,
+     "html": "国土地理院が<a href='https://maps.gsi.go.jp/'>地理院地図</a>で提供している情報です。",
+     "src": "./layers_gsi.txt"
+     }
+            ]
+}

@@ -13,7 +13,8 @@
 			inAction,
 			charMin = 65,
 			visible,
-			tpl = '<div class="colorpicker"><div class="colorpicker_color"><div><div></div></div></div><div class="colorpicker_hue"><div></div></div><div class="colorpicker_new_color"></div><div class="colorpicker_current_color"></div><div class="colorpicker_hex"><input type="text" maxlength="6" size="6" /></div><div class="colorpicker_rgb_r colorpicker_field"><input type="text" maxlength="3" size="3" /><span></span></div><div class="colorpicker_rgb_g colorpicker_field"><input type="text" maxlength="3" size="3" /><span></span></div><div class="colorpicker_rgb_b colorpicker_field"><input type="text" maxlength="3" size="3" /><span></span></div><div class="colorpicker_hsb_h colorpicker_field"><input type="text" maxlength="3" size="3" /><span></span></div><div class="colorpicker_hsb_s colorpicker_field"><input type="text" maxlength="3" size="3" /><span></span></div><div class="colorpicker_hsb_b colorpicker_field"><input type="text" maxlength="3" size="3" /><span></span></div><div class="colorpicker_clear">透明</div><div class="colorpicker_submit">決定</div></div>',
+			tpl = '<div class="colorpicker"><div class="colorpicker_color"><div><div></div></div></div><div class="colorpicker_hue"><div></div></div><div class="colorpicker_new_color"></div><div class="colorpicker_current_color"></div><div class="colorpicker_hex"><input type="text" maxlength="6" size="6" /></div><div class="colorpicker_rgb_r colorpicker_field"><input type="text" maxlength="3" size="3" /><span></span></div><div class="colorpicker_rgb_g colorpicker_field"><input type="text" maxlength="3" size="3" /><span></span></div><div class="colorpicker_rgb_b colorpicker_field"><input type="text" maxlength="3" size="3" /><span></span></div><div class="colorpicker_hsb_h colorpicker_field"><input type="text" maxlength="3" size="3" /><span></span></div><div class="colorpicker_hsb_s colorpicker_field"><input type="text" maxlength="3" size="3" /><span></span></div><div class="colorpicker_hsb_b colorpicker_field"><input type="text" maxlength="3" size="3" /><span></span></div><div class="colorpicker_clear">透明</div>' + 
+			'<div class="colorpicker_cancel">キャンセル</div>' + '<div class="colorpicker_submit">決定</div></div>',
 			defaults = {
 				eventName: 'click',
 				onShow: function () {},
@@ -32,6 +33,12 @@
 					.eq(2).val(rgb.g).end()
 					.eq(3).val(rgb.b).end();
 			},
+			fillRGBFieldsFromRGB = function  (rgb, cal) {
+				$(cal).data('colorpicker').fields
+					.eq(1).val(rgb.r).end()
+					.eq(2).val(rgb.g).end()
+					.eq(3).val(rgb.b).end();
+			},
 			fillHSBFields = function  (hsb, cal) {
 				$(cal).data('colorpicker').fields
 					.eq(4).val(hsb.h).end()
@@ -41,6 +48,11 @@
 			fillHexFields = function (hsb, cal) {
 				$(cal).data('colorpicker').fields
 					.eq(0).val(HSBToHex(hsb)).end();
+			},
+			
+			fillHexFieldsFromRGB = function (rgb, cal) {
+				$(cal).data('colorpicker').fields
+					.eq(0).val(RGBToHex(rgb)).end();
 			},
 			setSelector = function (hsb, cal) {
 				$(cal).data('colorpicker').selector.css('backgroundColor', '#' + HSBToHex({h: hsb.h, s: 100, b: 100}));
@@ -72,23 +84,33 @@
 				var cal = $(this).parent().parent(), col;
 				if (this.parentNode.className.indexOf('_hex') > 0) {
 					cal.data('colorpicker').color = col = HexToHSB(fixHex(this.value));
+					var rgb = HexToRGB( fixHex(this.value ) );
+					if (ev) {
+						fillRGBFieldsFromRGB(rgb, cal.get(0));
+						fillHSBFields(col, cal.get(0));
+					}
 				} else if (this.parentNode.className.indexOf('_hsb') > 0) {
 					cal.data('colorpicker').color = col = fixHSB({
 						h: parseInt(cal.data('colorpicker').fields.eq(4).val(), 10),
 						s: parseInt(cal.data('colorpicker').fields.eq(5).val(), 10),
 						b: parseInt(cal.data('colorpicker').fields.eq(6).val(), 10)
 					});
+					if (ev) {
+						fillRGBFields(col, cal.get(0));
+						fillHexFields(col, cal.get(0));
+					}
 				} else {
-					cal.data('colorpicker').color = col = RGBToHSB(fixRGB({
+					var rgb = fixRGB({
 						r: parseInt(cal.data('colorpicker').fields.eq(1).val(), 10),
 						g: parseInt(cal.data('colorpicker').fields.eq(2).val(), 10),
 						b: parseInt(cal.data('colorpicker').fields.eq(3).val(), 10)
-					}));
-				}
-				if (ev) {
-					fillRGBFields(col, cal.get(0));
-					fillHexFields(col, cal.get(0));
-					fillHSBFields(col, cal.get(0));
+					});
+					cal.data('colorpicker').color = col = RGBToHSB(rgb);
+					
+					if (ev) {
+						fillHexFieldsFromRGB(rgb, cal.get(0));
+						fillHSBFields(col, cal.get(0));
+					}
 				}
 				setSelector(col, cal.get(0));
 				setHue(col, cal.get(0));
@@ -182,6 +204,8 @@
 				current.preview = current.cal.data('colorpicker').livePreview;
 				$(document).bind('mouseup', current, upSelector).bind('touchend', current, upSelector);
 				$(document).bind('mousemove', current, moveSelector).bind('touchmove', current, moveSelector);
+				ev.data = current;
+				moveSelector(ev);
 			},
 			moveSelector = function (ev) {
 				
@@ -231,6 +255,16 @@
 				cal.data('colorpicker').origColor = col;
 				setCurrentColor(col, cal.get(0));
 				cal.data('colorpicker').onSubmit(col, HSBToHex(col), HSBToRGB(col), cal.data('colorpicker').el);
+			},
+			clickCancel = function (ev) {
+				var cal = $(this).parent();
+				var col = cal.data('colorpicker').origColor;
+				cal.data('colorpicker').origColor = col;
+				setCurrentColor(col, cal.get(0));
+				//cal.data('colorpicker').onSubmit(col, HSBToHex(col), HSBToRGB(col), cal.data('colorpicker').el);
+				cal.data('colorpicker').onChange.apply(cal, [col, HSBToHex(col), HSBToRGB(col)]);
+				cal.hide();
+				$(document).unbind('mousedown', hide);
 			},
 			
 			clickClear = function(ev) {
@@ -465,6 +499,8 @@
 							.bind('click', clickSubmit);
 						cal.find('div.colorpicker_clear')
 							.bind('click', clickClear);
+							cal.find('div.colorpicker_cancel')
+								.bind('click', clickCancel);
 						if ( options.clearButton != false )
 						{
 							cal.find('div.colorpicker_clear').show();

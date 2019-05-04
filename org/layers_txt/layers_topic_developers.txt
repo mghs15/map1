@@ -1,0 +1,11 @@
+﻿{
+  "layers": [
+    {
+     "type": "LayerGroup",
+     "title": "その他",
+     "toggleall": false,
+     "html": "主に開発の際に必要なデータや、テストデータです。各データの利用規約等をご確認の上利用ください。",
+     "src": "./layers_developers.txt"
+     }
+            ]
+}

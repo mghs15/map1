@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+
+	<link rel="shortcut icon" href="favicon.ico">
+	
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, ,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="何か、情報が加えられるかもしれないけど、今のところ何もない地図。ベースは地理院地図。">
+
+    <title>地図たまご</title>
+
+    <link rel="stylesheet" href="js.lib/leaflet-1.2.0/leaflet.css" />
+    <script type="text/javascript" src="js.lib/leaflet-1.2.0/leaflet.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./js.lib/jquery/jquery-ui.min.css"/>
+    <script type="text/javascript" src="./js.lib/jquery/jquery-1.11.1.min.js"></script>
+
+    <script type="text/javascript" src="./js.lib/jquery/ZeroClipboard2.0.2/ZeroClipboard.js"></script>
+    <script type="text/javascript" src="./js.lib/jquery/jquery.xdomainrequest.min.js"></script>
+    <script type="text/javascript" src="./js.lib/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js.lib/jquery/jquery.ui.touch-punch.js"></script>
+    <script type="text/javascript" src="./js.lib/jquery/jquery.qrcode/jquery.qrcode.min.js"></script>
+
+    <link rel="stylesheet" href="./js.lib/jquery/jquery.alerts.css" type="text/css" media="all" />
+    <script type="text/javascript" src="./js.lib/jquery/jquery.alerts.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./js.lib/jquery/colorpicker/jquery.simple-color-picker.css"/>
+    <script type="text/javascript" src="./js.lib/jquery/colorpicker/jquery.simple-color-picker.js"></script>
+	<script type="text/javascript" src="./js.lib/jquery/colorpicker/js/colorpicker.js"></script>
+	<link rel="stylesheet" type="text/css" href="./js.lib/jquery/colorpicker/css/colorpicker.css" />
+    <script type="text/javascript" src="./js.lib/jquery/ah-placeholder/jquery.ah-placeholder.js"></script>
+    <script type="text/javascript" src="js.lib/OSGeo/proj4js-combined.js"></script>
+	
+	
+    <script type="text/javascript" src="js.lib/geotiff.browserify.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="js.lib/leaflet-plugin/leaflet.label/leaflet.label-gsi.css"/>
+    <script type="text/javascript" src="js.lib/leaflet-plugin/leaflet.label/leaflet.label.js"></script>
+    <link rel="stylesheet" type="text/css" href="js.lib/leaflet-plugin/Control.MiniMap/Control.MiniMap-gsi.css"/>
+    <script type="text/javascript" src="js.lib/leaflet-plugin/Control.MiniMap/Control.MiniMap-gsi.js"></script>
+    <script type="text/javascript" src="js.lib/leaflet-plugin/TileLayer.GeoJSON/TileLayer.GeoJSON-gsi.js"></script>
+    <script type="text/javascript" src="js.lib/leaflet-plugin/leaflet-omnivore/leaflet-omnivore.min.js"></script>
+    
+    
+    <link rel="stylesheet" type="text/css" href="js.lib/leaflet-plugin/leaflet.draw/leaflet.draw-gsi.css"/>
+    <script type="text/javascript" src="js.lib/leaflet-plugin/leaflet.draw/leaflet.draw-gsi.js"></script>
+    <script type="text/javascript" src="js.lib/leaflet-plugin/Leaflet.Sync/L.Map.Sync.js"></script>
+    <script type="text/javascript" src="js.lib/leaflet-plugin/Leaflet.Geodesic/Leaflet.Geodesic.js"></script>
+    
+    <script type="text/javascript" src="js.lib/leaflet-plugin/leaflet-hash/leaflet-hash-gsi.js"></script>
+    <script type="text/javascript" src="js.lib/html2canvas.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/gsimaps.css"/>
+
+    <script type="text/javascript" src="js/gsimaps_sim.js"></script>
+    <script type="text/javascript" src="js/muni.js"></script>
+    <script type="text/javascript" src="js/jiki.js"></script>
+    <noscript>
+        <div class="noscript">
+        JavaScriptを有効にしてご覧ください。
+        </div>
+    </noscript>
+</head>
+
+<body>
+<!--
+    <div id="header" class="logo_s">
+        <div class="logoarea">
+            <a style="text-decoration:none;" href="">
+            <div id="title_logo_upper">地図たまご</div>
+            <div id="title_logo_lower">（非公式）</div>
+            </a>
+        </div>
+
+        <div class="magnifyingglass">
+               <img name = "magnifyimage" id="magnifyimage" src="./image/system/search.png"/>
+        </div>
+        <form name="search_f" id="search_f" autocomplete="off">
+            <input name="query" id="query" value="" type="search" placeholder="例：剱岳 / 金沢市木ノ新保町 / 35度0分0秒 135度0分0秒 / 35.00 135.00 / 54SUE83694920" />
+        </form>
+
+        <div class="help">
+            <a id="title_help" onclick="HelpButton()">?</a>
+        </div>
+    </div>
+-->
+    <div id="topmessage"></div>
+    <div id="map"></div>
+<!--
+    <div class="gsi_footer gsi_footer_template">
+    	<a class="btn" href="javascript:void(0);"></a>
+        <div class="item_frame item_start"><span class="heading">住所:</span><span class="address">----</span><span class="mini_comment">（およその住所）</span></div>
+        <div class="item_frame"><span class="latlng_60">----</span></div>
+        <div class="item_frame"><span class="latlng_10">----</span>&nbsp;&nbsp;<span class="heading">ズーム:</span><span class="current_zoom"></span></div>
+        <div class="item_frame"><span class="heading">UTMポイント：</span><span class="utm_point">----</span></div>
+        <div class="item_frame"><span class="heading">標高：</span><span class="elevation">----</span><span class="elevationSrc mini_comment_elev"></span></div>
+        <div class="item_frame" style="display:none;"><span class="heading">全国最新写真(シームレス)撮影期間：</span><span class="seamlessinfo">----</span></div>
+        
+        <a href="https://maps.gsi.go.jp/help/howtouse.html#h2-3" class="normalbutton footer_description_btn" target="_blank">表示値の説明</a>
+    </div>
+-->
+<!--    
+   <div id="help">
+        <div class="help_content"  style="text-align:center"  title="へるぷ">
+            <h1 style="font-size:120%;line-height: 130%;">ごめんなさい、何も準備してないです。</h1>
+		<p>以下のソースがベースになってます</p>
+	<a href="https://github.com/gsi-cyberjapan/gsimaps" target="_blank" style="font-size:110%;text-decoration:none;color:#000">地理院地図（Github）</a>
+
+		<p>また、背景地図等は国土地理院の地図を利用しています。</p>
+		<p>以下の利用規約に従ってください</p>
+		<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank" style="font-size:110%;text-decoration:none;color:#000">国土地理院コンテンツ利用規約</a>
+		<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" style="font-size:110%;text-decoration:none;color:#000">地理院タイル一覧</a>
+		
+		
+        </div>
+    </div>
+-->
+</body>
+
+</html>

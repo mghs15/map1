@@ -1320,6 +1320,7 @@ L.Edit.Poly = L.Handler.extend({
 		this._poly.edited = true;
 		this._poly.fire('edit');
 	},
+	
 
 	_onMarkerDrag: function (e) {
 		var marker = e.target;

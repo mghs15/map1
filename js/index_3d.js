@@ -438,6 +438,19 @@ function InitGet(){
 		bFaceTransparent = ( ret["b"] == 1 ? true : false );
 		bDisplayInfo = ( ret["dd"] == 1 ? true : false );
 		
+		if ( ret["w"] != "" ) {
+			ret["w"] = parseInt( ret["w"] );
+			if ( ret["w"] % 2 != 0 ) {
+				ret["w"] --;
+			}
+		}
+		if ( ret["h"] != "" ) {
+			ret["h"] = parseInt( ret["h"] );
+			if ( ret["h"] % 2 != 0 ) {
+				ret["h"] --;
+			}
+		}
+		
 		var reliefData = (  ret["relief"]  ?GSI3D.ReliefTileLayer.decodeElevationDataText( ret["relief"] ) : "" );
 		freeReliefTileDrawer.setElevationData( reliefData );
 		if ( freeReliefTileDrawer.getElevationData().useHillshademap )
@@ -5015,7 +5028,13 @@ function Draw3DGEOData()
 					{
 						oIconTextureCanvas = document.createElement('canvas');
 						oIconTextureCanvas.width = 512;
-						oIconTextureCanvas.height = 512;
+						var cHeight = Math.floor(oGeo3DData.length / 16);
+						if ((oGeo3DData.length % 16) > 0){
+							cHeight += 1;
+						}
+						cHeight *= 32;
+						oIconTextureCanvas.height = cHeight;
+						//oIconTextureCanvas.height = 512;
 					}
 					var destX = ( (this._iconNo % 16 ) * 32 );
 					var destY = ( Math.floor(this._iconNo / 16) * 32 );

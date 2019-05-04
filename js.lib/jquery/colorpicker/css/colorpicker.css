@@ -142,17 +142,16 @@
 .colorpicker_submit {
 	position: absolute;
 	width: 30px;
-	height: 22px;
-	line-height:22px;
-	left: 320px;
-	top: 142px;
+	height: 15px;
+	line-height:15px;
+	left: 319px;
+	top: 136px;
 	overflow: hidden;
 	color:#898989;
 	text-align:center;
-	font-size:9pt;
+	font-size:9px;
 	border:1px solid #999;
 	cursor:pointer;
-	
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
@@ -173,18 +172,50 @@
 	background: linear-gradient(#f5f5f5, #f0f0f0);
 	
 }
-
-.colorpicker_clear {
+.colorpicker_cancel {
 	position: absolute;
-	width: 30px;
-	height: 22px;
-	line-height:22px;
-	left: 286px;
-	top: 142px;
+	width: 61px;
+	height: 15px;
+	line-height:15px;
+	left: 287px;
+	top: 154px;
 	overflow: hidden;
 	color:#898989;
 	text-align:center;
-	font-size:9pt;
+	font-size:9px;
+	border:1px solid #999;
+	cursor:pointer;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	behavior: url(border-radius.htc);/*for IE*/
+	text-decoration:none;
+	color:#333;
+	vertical-align:middle;
+	box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 1px 1px 2px 1px  rgba(0, 0, 0, 0.1); /* Firefox */
+	-webkit-box-shadow: 1px 1px 2x 1px  rgba(0, 0, 0, 0.1); /* Chrome, Safari */
+	
+	background:#f5f5f5;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #f0f0f0), color-stop(0.00, #f5f5f5));
+	background: -webkit-linear-gradient(#f5f5f5, #f0f0f0);
+	background: -moz-linear-gradient(#f5f5f5, #f0f0f0);
+	background: -o-linear-gradient(#f5f5f5, #f0f0f0);
+	background: -ms-linear-gradient(#f5f5f5, #f0f0f0);
+	background: linear-gradient(#f5f5f5, #f0f0f0);
+	
+}
+.colorpicker_clear {
+	position: absolute;
+	width: 30px;
+	height: 15px;
+	line-height:15px;
+	left: 286px;
+	top: 136px;
+	overflow: hidden;
+	color:#898989;
+	text-align:center;
+	font-size:9px;
 	border:1px solid #999;
 	cursor:pointer;
 	
