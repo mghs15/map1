@@ -387,7 +387,7 @@ input[type=search]{
 #header {
 	position:relative;
 	z-index:2;
-	background-color:#333;
+	background-color:#ffaf58;
 	height:40px;
 	line-height:40px;
 	
@@ -396,7 +396,7 @@ input[type=search]{
 
 #header.border_bottom {
 	
-	border-bottom: 1px solid #777;
+	border-bottom: 1px solid #ffaf58;
 	box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: 0px 2px 2px 1px  rgba(0, 0, 0, 0.2); /* Firefox */
 	-webkit-box-shadow: 0px 2px 2x 1px  rgba(0, 0, 0, 0.2); /* Chrome, Safari */
@@ -443,7 +443,7 @@ input[type=search]{
 	background-repeat:no-repeat;
 	*/
 	padding-left:100px;
-    padding-right:130px;
+    padding-right:50px; /*mghs*/
 }
 #header.logo_s {
 	/*
@@ -452,7 +452,7 @@ input[type=search]{
 	background-repeat:no-repeat;
 	*/
 	padding-left:100px;
-    padding-right:130px;
+    padding-right:50px; /*mghs*/
 }
 
 form {
@@ -592,7 +592,7 @@ form {
 	
 	height:30px;
 	line-height:30px;
-	border: 2px solid #555;
+	border: 2px solid #fffaf4;
 	padding: 0px 0px 0px 28px;
 	width:100%;
 	*width:98%;
@@ -5773,7 +5773,7 @@ layertreedialog_search_taglist *
     margin-top: 3px;
     text-align: center;
     font-size: 18px;
-    color: #fff;
+    color: #000;
     line-height: 18px;
 }
 
@@ -5781,7 +5781,7 @@ layertreedialog_search_taglist *
     font-family: 'ヒラギノ丸ゴ Pro W4','ヒラギノ丸ゴ Pro','Hiragino Maru Gothic Pro','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','HG丸ｺﾞｼｯｸM-PRO','HGMaruGothicMPRO';
     text-align: center;
     font-size: 11px;
-    color: #fff;
+    color: #000;
     line-height: 11px;
 }
 /*
