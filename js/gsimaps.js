@@ -65,7 +65,7 @@ CONFIG.layersTab = null;
 CONFIG.layersTabUrl = "./layers_txt/tab.txt";
 
 CONFIG.layerBase = ['./layers_txt/layers0.txt'];
-CONFIG.layerBaseDefaultID = "std";
+CONFIG.layerBaseDefaultID = "osm";
 CONFIG.layerBaseFolder = "ベースマップ";
 CONFIG.layerBaseFolderSYS = "GSI.MAP.BASE";
 CONFIG.layersURL = './layers_txt/layers.txt';
@@ -530,7 +530,7 @@ CONFIG.HELPMENU = [
  設定：メニュー：情報
  ************************************************************************/
 CONFIG.MAPMENU = {
-  title: '情報'
+  title: 'マップ'
 };
 
 /************************************************************************
