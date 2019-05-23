@@ -19,7 +19,7 @@
       "id": "test_dem_maruyama",
       "title": "標高データ（国土地理院ベクトルタイル提供実験）",
       "url": "./xyz/test_dem_maruyama/{z}/{x}/{y}.geojson",
-      "minZoom": 17,
+      "minZoom": 18,
       "maxZoom": 18,
       "maxNativeZoom": 18,
 "html": "国土地理院のベクトルタイル提供実験のうち、基盤地図情報_数値標高モデル（10m）を加工しました。属性値として持っていた標高データを、z座標値として持たせ直したものです。<br>利用規約等は以下の資料をご確認ください。<br><a href='https://github.com/gsi-cyberjapan/vector-tile-experiment' target='_blank'>国土地理院ベクトルタイル提供実験</a><br><a href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html' target='_blank'>国土地理院コンテンツ利用規約</a>"
