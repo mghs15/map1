@@ -10,7 +10,7 @@ geojsonOptions:
         var height_ori = feature.properties['alti'] + 100000;
         var height_grad = "#" + height_ori;
         if(client && client == "gsi.3d"){
-            var mark = L.circleMarker(latlng, { weight : 0, color : height_grad, opacity : 0.0, fillColor : "#000000", fillOpacity : 0.3 });
+            var mark = L.circleMarker(latlng, { weight : 0, color : "#000000", opacity : 0.0, fillColor : "#000000", fillOpacity : 0.3 });
             mark.setRadius(5);
             return mark;
         }
@@ -22,9 +22,9 @@ geojsonOptions:
             html: '<div style=\"'
             +'width: 10px;'
             +'height: 10px;'
-            +'background-color: '
+            +'background-color: rgba('
             +height_grad
-            +';'
+            +', 0, 0, 0.3);'
             +'-webkit-border-radius: 10px;'
             +'-moz-border-radius: 10px;'
             +'border-radius: 10px;'
