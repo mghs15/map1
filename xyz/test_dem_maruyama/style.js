@@ -7,10 +7,10 @@ geojsonOptions:
 {
     pointToLayer: function(feature, latlng) {
         var client = feature.properties['_client'];
-        var height_1 = 99 - Math.floor(feature.properties['alti']/100);
-        var height_2 = Math.floor(feature.properties['alti']/10) - Math.floor(feature.properties['alti']/100)*10;
-        var height_3 = Math.floor(feature.properties['alti']) - Math.floor(feature.properties['alti']/10)*10;
-        var height_grad = "#" + height_1 + height_2 + "0" + height_3 + "0";
+        var height_1 = 256 - Math.floor(feature.properties['alti']/100)*25;
+        var height_2 = 256 - (Math.floor(feature.properties['alti']/10) - Math.floor(feature.properties['alti']/100)*10) * 25;
+        var height_3 = 256 - (Math.floor(feature.properties['alti']) - Math.floor(feature.properties['alti']/10)*10) * 25;
+        var height_grad = "#" + height_1.toString(16) + height_2.toString(16) + height_3.toString(16);
         if(client && client == "gsi.3d"){
             var mark = L.circleMarker(latlng, { weight : 0, color : height_grad, opacity : 0.0, fillColor : height_grad, fillOpacity : 0.3 });
             mark.setRadius(5);
