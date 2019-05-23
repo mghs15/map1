@@ -7,6 +7,7 @@ geojsonOptions:
 {
     pointToLayer: function(feature, latlng) {
         var client = feature.properties['_client'];
+        var height_grad = feature.properties['alti']*255/250;
         if(client && client == "gsi.3d"){
             var mark = L.circleMarker(latlng, { weight : 0, color : "#000000", opacity : 0.0, fillColor : "#000000", fillOpacity : 0.3 });
             mark.setRadius(5);
@@ -20,7 +21,9 @@ geojsonOptions:
             html: '<div style=\"'
             +'width: 10px;'
             +'height: 10px;'
-            +'background-color: rgba(0, 0, 0, 0.3);'
+            +'background-color: rgba('
+            +height_grad
+            +', 0, 0, 0.3);'
             +'-webkit-border-radius: 10px;'
             +'-moz-border-radius: 10px;'
             +'border-radius: 10px;'
