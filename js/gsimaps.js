@@ -19,7 +19,7 @@ var GSI = {
 var CONFIG = {};
 
 // maxZoom設定
-CONFIG.MAXZOOM = 18;
+CONFIG.MAXZOOM = 20;
 
 CONFIG.ISPREVIEWSITE = false;
 
